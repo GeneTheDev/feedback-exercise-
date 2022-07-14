@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <title>{% block title %} Flask Feedback {% endblock %}</title>
+    {% endblock %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        {% block content %}
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand">Feedback</a>
+            <ul class="nav justify-content-center">
+                <li class="nav-item m-3">
+                    <a href="/">Sign Up</a>
+                </li>
+                <li class="nav-item m-3">
+                    <a href="">Login</a>
+                </li>
+            </ul>
+        </div>
+        {% endblock %}
+
+    </nav>
+
+</body>
+
+</html>

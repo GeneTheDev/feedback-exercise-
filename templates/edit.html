@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Edit Feedback{% endblock %}
+
+{% block content %}
+<h1>Edit Feedback</h1>
+{{form.hidden_tag()}}
+
+{% for field in form.errors %}
+{{ field }}:
+
+{% for error in form.errors[field] %}
+
+{{ error }}
+
+{% endfor %}
+
+{% endfor %}
+{% for field in form if field.widget.input_type != 'hidden' %}
+{{field.label(class="col-sm-2 col-form-label")}}
+{{field(class="form-control")}}
+{% endfor %}
+<button>Edit!</button>
+{% endblock %}
